@@ -3,7 +3,7 @@ import { SignedIn, SignedOut, UserButton } from '@clerk/clerk-react';
 
 export default function Sidebar() {
   return (
-    <aside className="w-60 h-screen bg-white border-r flex flex-col py-6">
+    <aside className="w-50 h-screen bg-white border-r flex flex-col px-6 py-6">
       <nav className="flex flex-col gap-2">
         <Link to="/">Home</Link>
         <Link to="/books">Books</Link>
@@ -17,7 +17,7 @@ export default function Sidebar() {
           <Link to="/add-course">Add Course</Link>
           <Link to="/teacher-schedule">Teacher Schedule</Link>
           <Link to="/profile">Profile</Link>
-          <UserButton />
+          <UserButton/>
         </SignedIn>
         <SignedOut>
           <Link to="/login">Log in</Link>

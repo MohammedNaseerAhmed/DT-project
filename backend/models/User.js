@@ -6,7 +6,11 @@ const userSchema = new mongoose.Schema({
   name: String,
   fullName: String, // Add this if you want to store fullName separately
   email: String,
-  role: { type: String, enum: ['student', 'teacher', 'course_provider'], default: 'student' },
+  role: { 
+    type: String, 
+    enum: ['student', 'teacher', 'course_provider', 'scholarship_provider'], 
+    default: 'student' 
+  },
   subject: { type: String, default: '' },
   experience: { type: Number, default: 1 },
   imageUrl: { type: String, default: '' },

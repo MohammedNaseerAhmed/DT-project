@@ -16,6 +16,7 @@ import TopNav from './components/TopNav';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Profile from './pages/Profile';
+import AddScholarship from './pages/AddScholarship';
 
 const App = () => (
   <Router>
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/teachers" element={<Teachers />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/scholarships" element={<Scholarships />} />
+            <Route path="/scholarships/add" element={<AddScholarship />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Register />} />
             <Route path="/add-book" element={<SignedIn><AddBook /></SignedIn>} />

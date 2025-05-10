@@ -1,10 +1,9 @@
 const express = require('express');
 const Book = require('../models/Book');
-const { requireAuth, requireRole } = require('../middleware/auth');
+const { requireAuth } = require('../middleware/auth');
 const router = express.Router();
-
 // Any signed-in user can add a book
-router.post('/', requireAuth, async (req, res) => {
+router.post('/books', requireAuth, async (req, res) => {
   const book = new Book({ ...req.body, uploadedBy: req.user._id });
   await book.save();
   res.status(201).json(book);
