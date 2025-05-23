@@ -34,7 +34,7 @@ router.get('/profile', requireAuth, async (req, res) => {
 router.patch('/profile', requireAuth, async (req, res) => {
   try {
     const { role, subject, experience, imageUrl } = req.body;
-    if (role && !['student', 'teacher', 'course_provider'].includes(role)) {
+    if (role && !['student', 'teacher', 'course_provider','scholarship_provider'].includes(role)) {
       return res.status(400).json({ message: 'Invalid role' });
     }
 
